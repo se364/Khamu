@@ -95,38 +95,38 @@ $f3->route('GET|POST /menu', function($f3) {
 });
 
 //Order route
-$f3->route('GET|POST /profile', function($f3) {
-
-    $seeks = getSeek();
-
-    //If the form has been submitted
-    if($_SERVER['REQUEST_METHOD'] == 'POST') {
-
-        if (!validEmail($_POST['email'])) {
-
-            // set an error variable in the f3 hive
-            $f3->set('errors["email"]', 'Invalid Email');
-        }
-
-        if (empty($f3->get('errors'))) {
-
-            //Store the data in the session array
-            $_SESSION['email'] = $_POST['email'];
-            $_SESSION['state'] = $_POST['state'];
-            $_SESSION['seek'] = $_POST['seek'];
-            $_SESSION['bio'] = $_POST['bio'];
-
-
-            //Redirect to summary page
-            $f3->reroute('interest');
-        }
-    }
-
-    $f3->set('seek', $seeks);
-    $f3->set('email', $_POST['email']);
-    $view = new Template();
-    echo $view->render('views/ProfileInfo.html');
-});
+//$f3->route('GET|POST /profile', function($f3) {
+//
+//    $seeks = getSeek();
+//
+//    //If the form has been submitted
+//    if($_SERVER['REQUEST_METHOD'] == 'POST') {
+//
+//        if (!validEmail($_POST['email'])) {
+//
+//            // set an error variable in the f3 hive
+//            $f3->set('errors["email"]', 'Invalid Email');
+//        }
+//
+//        if (empty($f3->get('errors'))) {
+//
+//            //Store the data in the session array
+//            $_SESSION['email'] = $_POST['email'];
+//            $_SESSION['state'] = $_POST['state'];
+//            $_SESSION['seek'] = $_POST['seek'];
+//            $_SESSION['bio'] = $_POST['bio'];
+//
+//
+//            //Redirect to summary page
+//            $f3->reroute('interest');
+//        }
+//    }
+//
+//    $f3->set('seek', $seeks);
+//    $f3->set('email', $_POST['email']);
+//    $view = new Template();
+//    echo $view->render('views/ProfileInfo.html');
+//});
 
 //Breakfast route
 
