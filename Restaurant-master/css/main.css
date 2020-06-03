@@ -1,13 +1,5 @@
 /*
-Theme Name: Restaurant
-Theme URI: http://themewagon.com/demo/Restaurant/
-Author: ThemeWagon
-Author URI: http://themewagon.com/
-Description: 
-Version: 1.0
-License: GNU General Public License v3 or later
-License URI: http://www.gnu.org/licenses/gpl-3.0.html
-Text Domain: restaurant
+
 */
 /*========================
 GLOBAL
@@ -20,7 +12,7 @@ h1 {
     border: 1px solid rgba(47, 46, 47, 0.59);
 }
 .navactive{
-   border-bottom: 1px solid #96E16B;
+   border-bottom: 1px #EC7172;
 }
 p.desc-text{
     font-size: 20px;
@@ -92,13 +84,15 @@ p.desc-text{
 .carousel-slide{
     float: right !important;
     margin-right: -15px;
-} 
+}
+
+
 
 li.item{
     position: relative; 
     width: 100%; /* for IE 6 */
 
-    background: rgba(211, 15, 34, 1);
+    background: #EC7172;
 }
 
 .icon_knife {
@@ -161,7 +155,7 @@ h1, h2, p, span, a {
     transition: color 0.3s ease-in-out;
 }
 .color_animation:hover{
-    color: #9BE86F !important;
+    color: #EC7172!important;
 }
 /*========================
     NAV
@@ -180,9 +174,13 @@ div#bs-example-navbar-collapse-1 {
 }
 
 nav {
-    background: #1E1E1E !important;
+    /*background: rgba(61, 61, 61, 0.95) !important;*/
+    background: #2A2B32 !important;
     font-size: 18px;
     color: white !important;
+}
+.image2{
+    border-radius: 50%;
 }
 
 li{
@@ -198,10 +196,9 @@ INTRO CONTAINER
     padding: 0;
     min-width: 100%;
     height: 100%;
-    background: url('../images/steak.jpg') no-repeat center center;
     background-size: cover;
     text-align: center;
-    background-position: center;  
+    background: url('../images/KhamuKoicover.jpg') no-repeat center;
 }
 .follow_container {
     width: 100%;
@@ -217,21 +214,27 @@ INTRO CONTAINER
     padding: 0;
 }
 .top-title{
-    color: white;
+    color: black;
     font-family: 'Playball', cursive;
     font-size: 120px;
     font-weight: 400;
  }
 .second-title {
-    font-weight: lighter; 
+    font-weight: bold;
     font-size: 30px; 
     font-style: italic; 
     text-transform: capitalize;
+    color: black;
+}
+.image1{
+    border-radius: 50%;
 }
 
+
 .white{
-    color: white;
+    color: black;
 }
+
 
 /* ========================
     IMAGE INTRO BANNER CONTENT
@@ -246,6 +249,10 @@ INTRO CONTAINER
     margin: 0 auto 0 auto;
     z-index: 98;
     text-align: center;
+}
+
+img.khamuimage{
+    border-radius: 10%;
 }
 
 .background_content h1 {
@@ -282,7 +289,7 @@ INTRO CONTAINER
     background-attachment: fixed;
 }
  .pricing.background_content{
-    background: url('../images/pricing.jpg') no-repeat center center; 
+    background: url('../images/Khamukoimenu.jpg') no-repeat center center;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -336,7 +343,7 @@ IMAGE DESCRIPTION BODY CONTENT
 FIRST FOOTER CONTENT
 =========================*/
 .first_footer {
-    background-color: #1e1e1e;
+    background-color: #2A2B32;
     text-align: center;
 }
 .social_heading,
@@ -347,7 +354,7 @@ FIRST FOOTER CONTENT
     font-size: 28px;
     font-weight: 900;
     letter-spacing: 0.040em;
-    color: #63C85D;
+    color: #EC7172;
     text-align: center;
     margin: 40px 0 0 0;
 }
@@ -369,7 +376,7 @@ FIRST FOOTER CONTENT
 }
 
 .social_info a:hover {
-    color: #6c8f34;
+    color: #EC7172;
 }
 
 .social_icons {
@@ -379,7 +386,7 @@ FIRST FOOTER CONTENT
 .social_icons li {
     list-style: none;
     display: inline-block;
-    padding: none;
+    /*padding: none;*/
 }
 
 .social_icons li:nth-child(1),
@@ -394,30 +401,13 @@ FIRST FOOTER CONTENT
 }
 
 .social_icons li a:hover {
-    color: #6c8f34;
+    color: #EC7172;
 }
 
 .direction a{
     color: white !important;
 }
 
-/*========================
-SECOND FOOTER CONTENT
-=========================*/
-
-footer.sub_footer {
-    background-color: #1C1C1C;
-    padding: 20px;
-}
-
-p.sub-footer-text{
-    color: #6B6B6B;
-}
-
-p.sub-footer-text a{
-    color: #BDBDBD;
-    text-decoration: none;
-}
 
 /*Contact */
 
@@ -462,6 +452,7 @@ p.sub-footer-text a{
     padding: 50px 0;
 }
 
+
 /* Input Styles */
 
 .form{
@@ -478,13 +469,13 @@ p.sub-footer-text a{
 }
 
 .form:hover{
-    border:1px solid #8BC3A3;
+    border:1px #EC7172;
 }
 
 .form:focus{
     color: white;
     outline: none;
-    border:1px solid #8BC3A3;
+    border:1px #EC7172;
 }
 
 .textarea{
@@ -524,7 +515,7 @@ p.sub-footer-text a{
     height: auto;
     padding:15px;
     color:#fff;
-    background:rgba(80, 160, 108, 1);
+    background:#EC7172;
     border:none;
     border-radius:3px;
     outline: none;
@@ -538,7 +529,7 @@ p.sub-footer-text a{
     text-align: center;
 }
 .form-btn:hover{
-    background: rgba(85, 184, 120, 1);
+    background: #EC7172;
     color: white;
     border:none;
 }
@@ -584,6 +575,11 @@ MEDIA QUERIES MOBILE
     .form-btn {
         margin: 0px auto;
         /* display: block; */
+    }
+    .khamuimage{
+        width: 200px;
+        height: 200px;
+
     }
 }
 /*========================
@@ -664,7 +660,7 @@ MEDIA QUERIES TABLET
         transition: color 0.3s ease-in-out;
     }
     .main-nav a:hover {
-        color: #6c8f34;
+        color: #EC7172;
     }
     .direction a {
         border: 5px solid rgba(0,0,0,0);
@@ -674,7 +670,7 @@ MEDIA QUERIES TABLET
         background-size: 30px; 
     }
     .direction a:hover {
-        border: 5px solid #6D903C;
+        border: 5px #EC7172;
     }
 
     /*========================
@@ -756,9 +752,9 @@ MEDIA QUERIES TABLET
         display: inline-block;
         margin: 0 auto;
         width: 325px;
-    } 
+    }
 
-} /*END OF MEDIA QUERY*/
+ /*END OF MEDIA QUERY*/
 
 /*========================
 MEDIA QUERIE DESKTOP
