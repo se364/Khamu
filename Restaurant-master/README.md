@@ -1,4 +1,4 @@
 Restaurant
 ==========
 
-A template for Restaurant business
+A Desi American Restaurant based in Dhaka, Bangladesh
