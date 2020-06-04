@@ -18,7 +18,8 @@ session_start();
 //Require the autoload file
 require_once("vendor/autoload.php");
 //require_once("model/data-layer.php");
-//require_once ("model/validation.php");
+require_once ("model/validation.php");
+
 
 // Create an instance of the Base Class
 $f3 = Base::instance();
@@ -167,6 +168,31 @@ $f3->route('GET|POST /reservation', function($f3) {
 //    $f3->set('outdoor', $outdoor);
 //    $f3->set('selectIndoor', $_POST['indoor']);
 //    $f3->set('selectOutdoor', $_POST['outdoor']);
+
+    if($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+        if(!validName($_POST['first_name'])) {
+            $f3->set('errors["first_name"]', "Please provide a name");
+        }
+
+        if(!validName($_POST['last_name'])) {
+            $f3->set('errors["last_name"]', "Please provide a name");
+        }
+
+
+        if (empty($f3->get('errors'))) {
+            // $_SESSION['first_name'] = $_POST['first_name'];
+            // $_SESSION['last_name'] = $_POST['last_name'];
+            // $_SESSION['phone'] = $_POST['phone'];
+            // $_SESSION['email'] = $_POST['email'];
+            // $_SESSION['date'] = $_POST['datepicker'];
+
+            $msg = $_POST['first_name'] . " " . $_POST['last_name'] . " has made a reservation for " . $_POST['datepicker'];
+
+            mail("aparker24@mail.greenriver.edu", "reservation made!", $msg);
+        }
+    }
+
     $view = new Template();
     echo $view->render('views/reservation.html');
 });
