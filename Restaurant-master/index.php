@@ -179,17 +179,25 @@ $f3->route('GET|POST /reservation', function($f3) {
             $f3->set('errors["last_name"]', "Please provide a name");
         }
 
+        if(!validEmail($_POST['email'])) {
+            $f3->set('errors["email"]', "Please provide a name");
+        }
+
+        if(!validDate($_POST['datepicker'])) {
+            $f3->set('errors["datepicker"]', "Please provide a name");
+        }
+
+        if(!validPhone($_POST['phone'])) {
+            $f3->set('errors["phone"]', "Please provide a name");
+        }
+
 
         if (empty($f3->get('errors'))) {
-            // $_SESSION['first_name'] = $_POST['first_name'];
-            // $_SESSION['last_name'] = $_POST['last_name'];
-            // $_SESSION['phone'] = $_POST['phone'];
-            // $_SESSION['email'] = $_POST['email'];
-            // $_SESSION['date'] = $_POST['datepicker'];
 
-            $msg = $_POST['first_name'] . " " . $_POST['last_name'] . " has made a reservation for " . $_POST['datepicker'];
+            $msg = $_POST['first_name'] . " " . $_POST['last_name'] . " has made a reservation for " . $_POST['datepicker']
+            . "\n\nEmail: " . $_POST['email'] . "\n\nPhone: " . $_POST['phone'];
 
-            mail("aparker24@mail.greenriver.edu", "reservation made!", $msg);
+            mail($_POST['email'], "reservation made!", $msg);
         }
     }
 
