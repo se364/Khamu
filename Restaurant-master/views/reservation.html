@@ -60,7 +60,7 @@
             <!-- Form Area -->
             <div class="contact-form">
                 <!-- Form -->
-                <form id="contact-us" method="post" action="reserve.php">
+                <form id="contact-us" method="post" action="#">
                     <!-- Left Inputs -->
                     <div class="container">
                         <div class="row">
@@ -69,17 +69,31 @@
                                     <div class="col-lg-6 col-md-6 col-xs-6">
                                         <!-- Name -->
                                         <input type="text" name="first_name" id="first_name" required="required" class="form" placeholder="First Name" />
+                                        <check if="{{ isset(@errors['first_name']) }}">
+                                            {{ @errors['first_name'] }}
+                                        </check>
+
                                         <input type="text" name="last_name" id="last_name" required="required" class="form" placeholder="Last Name" />
-                                        <input type="text" name="state" id="state" required="required" class="form" placeholder="State" />
-                                        <input type="text" name="datepicker" id="datepicker" required="required" class="form" placeholder="Reservation Date" />
+                                        <check if="{{ isset(@errors['last_name']) }}">
+                                            {{ @errors['last_name'] }}
+                                        </check>
+
+                                        <input type="date" name="datepicker" id="datepicker" required="required" class="form" placeholder="Reservation Date" />
+                                        <check if="{{ isset(@errors['datepicker']) }}">
+                                            {{ @errors['datepicker'] }}
+                                        </check>
                                     </div>
 
                                     <div class="col-lg-6 col-md-6 col-xs-6">
                                         <!-- Name -->
                                         <input type="text" name="phone" id="phone" required="required" class="form" placeholder="Phone" />
-                                        <input type="text" name="guest" id="guest" required="required" class="form" placeholder="Guest Number" />
+                                        <check if="{{ isset(@errors['phone']) }}">
+                                            {{ @errors['phone'] }}
+                                        </check>
                                         <input type="email" name="email" id="email" required="required" class="form" placeholder="Email" />
-                                        <input type="text" name="subject" id="subject" required="required" class="form" placeholder="Subject" />
+                                        <check if="{{ isset(@errors['email']) }}">
+                                            {{ @errors['email'] }}
+                                        </check>
                                     </div>
 
                                     <div class="col-xs-6 ">
