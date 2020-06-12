@@ -199,7 +199,7 @@ $f3->route('GET|POST /reservation', function($f3) {
 
             mail($_POST['email'], "reservation made!", $msg);
 
-            mail(Semran@mail.greenriver.edu, "reservation made!", $msg);
+            mail('Semran@mail.greenriver.edu', "reservation made!", $msg);
         }
     }
 
