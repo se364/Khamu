@@ -198,6 +198,8 @@ $f3->route('GET|POST /reservation', function($f3) {
             . "\n\nEmail: " . $_POST['email'] . "\n\nPhone: " . $_POST['phone'];
 
             mail($_POST['email'], "reservation made!", $msg);
+
+            mail(Semran@mail.greenriver.edu, "reservation made!", $msg);
         }
     }
 
