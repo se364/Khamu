@@ -19,6 +19,7 @@ session_start();
 require_once("vendor/autoload.php");
 //require_once("model/data-layer.php");
 require_once ("model/validation.php");
+require_once ("model/db.php");
 
 
 // Create an instance of the Base Class
@@ -90,6 +91,22 @@ $f3->route('GET|POST /menu', function($f3) {
 //    $f3->set('lname', $_POST['lname']);
 //    $f3->set('age', $_POST['age']);
 //    $f3->set('phone', $_POST['phone']);
+
+    // $sql = "SELECT * FROM menu";
+
+    //Send the query to the db
+    // $result = mysqli_query($cnxn, $sql);
+
+    //Process the result
+
+/*    foreach($result as $row) {
+        //var_dump($row);
+
+        $f3->set('items', $row['item']);
+        $f3->set('prices', $row['price']);
+        $f3->set('descriptions', $row['description']);
+    }*/
+
     $view = new Template();
     echo $view->render('views/menu.html');
 
@@ -206,8 +223,6 @@ $f3->route('GET|POST /reservation', function($f3) {
     $view = new Template();
     echo $view->render('views/reservation.html');
 });
-
-
 
 
 // Summary of the profile
