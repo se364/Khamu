@@ -9,14 +9,14 @@
      */
 
     function getSidePrices(){
-        return array(2, 3, 3, 3, 3, 3, 4);
+        return array(2, 3, 3, 3, 3, 3, 4, 5);
     }
     /** getBeveragesPrices()
     * Returns an array of prices for beverages
     * @return array
     */
     function getBeveragesPrices(){
-        return array(2, 2, 2, 2, 2, 2, 2);
+        return array(2, 2, 2, 2, 2, 2, 2, 2);
     }
 
 
@@ -26,7 +26,7 @@
      */
     function getSides()
     {
-        $indoor = array("French Fries", "Onion Rings", "Mozzarella Stick","Nachos","Salsa & Chips","Waffle Fries", "Fried Eggplants");
+        $indoor = array("French Fries", "Onion Rings", "Mozzarella Stick","Nachos","Salsa & Chips","Waffle Fries", "Fried Eggplants", "Small pot pie");
         return $indoor;
     }
 
@@ -36,6 +36,6 @@
     */
     function getBeverages()
     {
-        $outdoor = array("Coke", "Diet Coke", "Dr.Pepper", "Fanta","Sprite","Fruit Punch","Mango Juice");
+        $outdoor = array("Coke", "Diet Coke", "Dr.Pepper", "Fanta","Sprite","Fruit Punch","Mango Juice","Lemonade");
         return $outdoor;
     }

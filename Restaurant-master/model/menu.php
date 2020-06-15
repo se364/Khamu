@@ -1,4 +1,8 @@
 <?php
+
+/**
+ * Class menu
+ */
 class menu
 {
     private $info;
@@ -6,6 +10,13 @@ class menu
     private $name;
     private $image;
 
+    /**
+     * menu constructor.
+     * @param $name
+     * @param $price
+     * @param $info
+     * @param $image
+     */
     function __construct($name, $price, $info, $image) {
         $this->name = $name;
         $this->price = $price;
@@ -14,6 +25,9 @@ class menu
 
     }
 
+    /**
+     * function toString
+     */
     function toString() {
         echo "<div class=\"single-menu\">
         <img src=\"/328/Khamu/Restaurant-master/images/food_icon0" . $this->image . ".jpg\" alt=\"food1\">
