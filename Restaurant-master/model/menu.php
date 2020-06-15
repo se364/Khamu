@@ -34,6 +34,7 @@ class menu
         <div class=\"menu-content\">
             <h4>" . $this->name . " <span> $" . $this->price . "</span></h4>
             <p>" . $this->info . "</p>
+            <input type='checkbox' id='". $this->name . "'>
         </div>
     </div>";
     }
