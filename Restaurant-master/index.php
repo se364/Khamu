@@ -18,8 +18,9 @@ session_start();
 //Require the autoload file
 require_once("vendor/autoload.php");
 require_once("model/data-layer.php");
-//require_once ("model/validation.php");
-//require_once ("model/db.php");
+require_once ("model/validation.php");
+require_once ("model/menu.php");
+
 
 
 // Create an instance of the Base Class
@@ -69,13 +70,41 @@ $f3->route('GET|POST /menu', function($f3) {
 
     }
 //
+
+    require ("model/db.php");
+
+    $sql = "SELECT * FROM menu";
+
+//Send the query to the db
+    $result = mysqli_query($cnxn, $sql);
+
+//convert the query into menu objects
+    $i = 0;
+    foreach($result as $row){
+        //var_dump($row);
+
+        $name = $row['Name'];
+        $price = $row['Price'];
+        $info = $row['Info'];
+        $id = $row['ID'];
+
+        $object = new menu($name, $price, $info, $id);
+
+        $menuArray[$i] = $object->toString();
+
+        $i++;
+
+    }
+
+    $f3->set('menu', $menuArray);
+
     $f3->set('indoor', $indoor);
     $f3->set('outdoor', $outdoor);
 //    $f3->set('selectIndoor', $_POST['indoor']);
 //    $f3->set('selectOutdoor', $_POST['outdoor']);
 
     $view = new Template();
-    echo $view->render('views/menu.html');
+    echo $view->render('views/menu(db).html');
 
 });
 
