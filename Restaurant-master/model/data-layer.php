@@ -3,66 +3,39 @@
     //data-layer.php
 
 
-    /* getGender()
-     * Returns an array of gender
+    /** getSidesPrices()
+     * Returns an array of prices for side dishes
      * @return array
      */
 
-    function getGender()
-    {
-        $genders = array("Male", "Female");
-        return $genders;
+    function getSidePrices(){
+        return array(2, 3, 3, 3, 3, 3, 4);
+    }
+    /** getBeveragesPrices()
+    * Returns an array of prices for beverages
+    * @return array
+    */
+    function getBeveragesPrices(){
+        return array(2, 2, 2, 2, 2, 2, 2);
     }
 
 
-
-    /* getSeek()
-     * Returns an array of indoor interest
+    /** getSides()
+     * Returns an array of side dishes
      * @return array
      */
-    function getSeek()
+    function getSides()
     {
-        $seeks = array("Male", "Female");
-        return $seeks;
-    }
-
-    /* getStates()
-     * Returns an array of States
-     * @return array
-     */
-
-    function getStates()
-    {
-        $states = array('Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado',
-            'Connecticut', 'Delaware', 'District of Columbia', 'Florida', 'Georgia', 'Hawaii', 'Idaho', 'Illinois',
-            'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana', 'Maine', 'Maryland', 'Massachusetts', 'Michigan',
-            'Minnesota', 'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire', 'New Jersey',
-            'New Mexico', 'New York', 'North Carolina', 'North Dakota', 'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania',
-            'Rhode Island', 'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont', 'Virginia',
-            'Washington', 'West Virginia', 'Wisconsin', 'Wyoming',);
-
-        return $states;
-    }
-
-
-
-
-    /* getIndoor()
-     * Returns an array of indoor interest
-     * @return array
-     */
-    function getIndoor()
-    {
-        $indoor = array("tv", "puzzles", "movies","reading","cooking","playing cards", "board games","video games");
+        $indoor = array("French Fries", "Onion Rings", "Mozzarella Stick","Nachos","Salsa & Chips","Waffle Fries", "Fried Eggplants");
         return $indoor;
     }
 
-    /* getOutdoor()
-    * Returns an array of outdoor
+    /** getBeverages()
+    * Returns an array of beverages
     * @return array
     */
-    function getOutdoor()
+    function getBeverages()
     {
-        $outdoor = array("hiking", "walking", "biking", "climbing","swimming","collecting","gym","beach");
+        $outdoor = array("Coke", "Diet Coke", "Dr.Pepper", "Fanta","Sprite","Fruit Punch","Mango Juice");
         return $outdoor;
     }
