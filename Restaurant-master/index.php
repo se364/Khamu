@@ -38,6 +38,8 @@ $f3->route('GET|POST /menu', function($f3) {
 
     $outdoor = getBeverages();
     $indoor =  getSides();
+    $price =  getSidePrices();
+    $beverage = getBeveragesPrices();
 //
 //    //If the form has been submitted
     if($_SERVER['REQUEST_METHOD'] == 'POST') {
