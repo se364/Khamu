@@ -90,7 +90,7 @@ $f3->route('GET|POST /menu', function($f3) {
 
         $object = new menu($name, $price, $info, $id);
 
-        $menuArray[$i] = $object->toString();
+        $menuArray[$i] = $object;
 
         $i++;
 
@@ -104,7 +104,7 @@ $f3->route('GET|POST /menu', function($f3) {
 //    $f3->set('selectOutdoor', $_POST['outdoor']);
 
     $view = new Template();
-    echo $view->render('views/menu(db).html');
+    echo $view->render('views/menu_db.html');
 
 });
 
