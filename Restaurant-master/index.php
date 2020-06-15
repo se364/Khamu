@@ -36,8 +36,8 @@ $f3->route('GET /', function(){
 //Order route
 $f3->route('GET|POST /menu', function($f3) {
 
-    $outdoor = getOutdoor();
-    $indoor =  getIndoor();
+    $outdoor = getBeverages();
+    $indoor =  getSides();
 //
 //    //If the form has been submitted
     if($_SERVER['REQUEST_METHOD'] == 'POST') {
