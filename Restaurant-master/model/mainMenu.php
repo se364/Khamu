@@ -1,8 +1,9 @@
 <?php
 
 class mainMenu extends menu {
-    private $info;
-    private $image;
+    private $_info;
+    private $_image;
+
 
     /**
      * menu constructor.
@@ -12,10 +13,11 @@ class mainMenu extends menu {
      * @param $image
      */
     function __construct($name, $price, $info, $image) {
-        $this->name = $name;
-        $this->price = $price;
-        $this->info = $info;
-        $this->image = $image;
+        parent::__construct($name, $price);
+//        $this->_name = $name;
+//        $this->_price = $price;
+        $this->_info = $info;
+        $this->_image = $image;
 
 
     }
@@ -27,9 +29,9 @@ class mainMenu extends menu {
         echo "<div class=\"single-menu\">
         <img src=\"/328/Khamu/Restaurant-master/images/food_icon0" . $this->image . ".jpg\" alt=\"food1\">
         <div class=\"menu-content\">
-            <h4>" . $this->name . " <span> $" . $this->price . "</span></h4>
+            <h4>" . $this->_name . " <span> $" . $this->_price . "</span></h4>
             <p>" . $this->info . "</p>
-            <input type='checkbox' id='". $this->name . "'>
+            <input type='checkbox' id='". $this->_name . "'>
         </div>
     </div>";
     }

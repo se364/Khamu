@@ -1,8 +1,12 @@
 <?php
-$database = 'aparker1_grc';
-$username = 'aparker1';
-$password = 'AParkerDB1!';
+$database = 'semrangr_grc';
+$username = 'semrangr_grcuser';
+$password = 'Mwtmw26-j';
 $hostname = 'localhost';
 
-$cnxn = @mysqli_connect($hostname, $username, $password, $database)
-or die("Error connecting to database: " . mysqli_connect_error());
+$cnxn = @mysqli_connect($hostname, $username, $password,$database)
+or die("Error connecting to database: " .
+    mysqli_connect_error());
+
+//echo "connected!";
+?>

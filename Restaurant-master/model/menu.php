@@ -6,8 +6,8 @@
 class menu
 {
 
-    protected $price;
-    protected $name;
+    private $price;
+    private $name;
 
 
     /**
@@ -23,5 +23,3 @@ class menu
     }
 
 }
-
-
