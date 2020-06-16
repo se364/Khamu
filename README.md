@@ -35,7 +35,6 @@ KhamKoi.com is a Bangaladeshi Restaurant in Dhaka. It serves American Cuisine to
   ![](Restaurant-master/images/ERDiagram.PNG)
   
   
-  ![](Restaurant-mamster/images/UML.PNG)
-
+  ![](Restaurant-master/images/UML.PNG)
 
 
