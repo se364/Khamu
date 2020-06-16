@@ -29,7 +29,9 @@ KhamKoi.com is a Bangaladeshi Restaurant in Dhaka. It serves American Cuisine to
 9.
   Code doesn't repeat itself, comments break up segments of long functions.
   
-10. ER Diagram and UML Diagram 
+10. 
+  ER Diagram and UML Diagram 
+  ![](Restaurant-master/images/ERDiagram.PNG)
 
 
 
