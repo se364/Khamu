@@ -37,10 +37,10 @@ $f3->route('GET /', function(){
 //Order route
 $f3->route('GET|POST /menu', function($f3) {
 
-    $outdoor = getBeverages();
-    $indoor =  getSides();
-    $price =  getSidePrices();
-    $beverage = getBeveragesPrices();
+//    $outdoor = getBeverages();
+//    $indoor =  getSides();
+//    $price =  getSidePrices();
+//    $beverage = getBeveragesPrices();
 //
 //    //If the form has been submitted
     if($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -62,8 +62,8 @@ $f3->route('GET|POST /menu', function($f3) {
 //
 //        //Store the data in the session array
 
-        $_SESSION['indoor'] = $_POST['indoor'];
-        $_SESSION['outdoor'] = $_POST['outdoor'];
+        $_SESSION['mainFood'] = $_POST['mainFood'];
+
 //
         //Redirect to summary page
         $f3->reroute('summery');

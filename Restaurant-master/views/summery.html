@@ -11,60 +11,9 @@
 
 <include href="includes/navmenu.html"></include>
 
-<div class="container mt-5">
-
-    <div class="row px-md-5 mx-md-5">
-
-        <div class="col-md-6">
-
-
-            <ul class="list-group">
-                <li class="list-group-item">Name: {{ @SESSION.member->getFname()}} {{ @SESSION.member->getLname()}}</li>
-                <li class="list-group-item">Gender: {{ @SESSION.member->getGender()}}</li>
-                <li class="list-group-item">Age: {{ @SESSION.member->getAge()}}</li>
-                <li class="list-group-item">Phone: {{ @SESSION.member->getPhone()}}</li>
-                <li class="list-group-item">Email: {{ @SESSION.member->getEmail()}}</li>
-                <li class="list-group-item">State: {{ @SESSION.member->getState()}}</li>
-                <li class="list-group-item">Seeking: {{ @SESSION.member->getSeeking()}}</li>
-                <!--                <li class="list-group-item">Interests: {{ @SESSION.indoor}} {{ @SESSION.outdoor}}</li>-->
-                <li class="list-group-item"> Interest:
-                    <check if="{{ get_class($_SESSION['member']) == 'PremiumMember' }}">
-                        <check if="{{  @SESSION.member->getIndoorInterests() != NULL}}" >
-                            <p> {{ implode(@SESSION.member->getIndoorInterests(), ", ") }}</p>
-                        </check>
-                        <check if="{{ (@SESSION.member->getOutdoorInterests() != NULL) }}">
-                            <p> {{ implode(@SESSION.member->getOutdoorInterests(), ", ") }}</p>
-                        </check>
-                    </check>
-            </ul>
-
-        </div>
-
-<!--        <div class="col-md-6">-->
-
-
-<!--            <div class="text-center m-3">-->
-<!--                <img class="img-fluid " src="/328/Dating/images/profile.png" alt="profile" height="200" width="200">-->
-<!--            </div>-->
-
-
-<!--            <p class="lead">Biography</p>-->
-<!--            <p class="text-center">{{ @SESSION.member->getBio()}}</p>-->
-
-<!--        </div>-->
-
-<!--    </div>-->
-
-
-    <div class="text-center m-3">
-        <button type="button" class="btn btn-primary btn-lg">Contact Me!</button>
-    </div>
-
+<div class="container">
+    <p>{{ implode(@SESSION.mainFood, ", ") }}</p>
 </div>
-
-
-
-
 
 </body>
 </html>
