@@ -18,8 +18,8 @@ class sideMenu extends menu {
     /**
      * function toString
      */
-    function toString() {
-        echo "<div class=\"col-md-3\">
+    function __toString() {
+        return "<div class=\"col-md-3\">
                 <div class=\"form-check\">
                     <label class=\"form-check-label\" ><input class=\"form-check-input\" type=\"checkbox\" value=\" ". $this->_name . "\" id=side[] name=\"side[]\">
                         " . $this->_name . ", $" . $this->_price . "

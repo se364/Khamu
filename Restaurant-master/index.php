@@ -71,37 +71,26 @@ $f3->route('GET|POST /menu', function($f3) {
     }
 //
 
-    require ("model/db.php");
 
-    $sql = "SELECT * FROM menu";
+    $mainMenu = setMenu("main");
+    $sideMenu = setMenu("side");
+    $beverageMenu = setMenu("beverage");
 
-//Send the query to the db
-    $result = mysqli_query($cnxn, $sql);
 
-//convert the query into menu objects
-    $i = 0;
-    foreach($result as $row){
-        //var_dump($row);
+    $f3->set('main', $mainMenu);
+    $f3->set('sides', $sideMenu);
+    $f3->set('beverages', $beverageMenu);
 
-        $name = $row['Name'];
-        $price = $row['Price'];
-        $info = $row['Info'];
-        $id = $row['ID'];
-
-        $object = new menu($name, $price, $info, $id);
-
-        $menuArray[$i] = $object;
-
-        $i++;
-
-    }
-
-    $f3->set('menu', $menuArray);
-
-    $f3->set('indoor', $indoor);
-    $f3->set('outdoor', $outdoor);
+//    $f3->set('indoor', $indoor);
+//    $f3->set('outdoor', $outdoor);
 //    $f3->set('selectIndoor', $_POST['indoor']);
 //    $f3->set('selectOutdoor', $_POST['outdoor']);
+
+    //var_dump($mainMenu);
+//
+    //var_dump($sideMenu);
+//
+    //var_dump($beverageMenu);
 
     $view = new Template();
     echo $view->render('views/menu_db.html');

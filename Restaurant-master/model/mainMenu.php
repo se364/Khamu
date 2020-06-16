@@ -1,6 +1,8 @@
 <?php
 
 class mainMenu extends menu {
+    private $_name;
+    private $_price;
     private $_info;
     private $_image;
 
@@ -14,8 +16,8 @@ class mainMenu extends menu {
      */
     function __construct($name, $price, $info, $image) {
         parent::__construct($name, $price);
-//        $this->_name = $name;
-//        $this->_price = $price;
+        $this->_name = $name;
+        $this->_price = $price;
         $this->_info = $info;
         $this->_image = $image;
 
@@ -25,8 +27,8 @@ class mainMenu extends menu {
     /**
      * function toString
      */
-    function toString() {
-        echo "<div class=\"single-menu\">
+    function __toString() {
+        return "<div class=\"single-menu\">
         <img src=\"/328/Khamu/Restaurant-master/images/food_icon0" . $this->image . ".jpg\" alt=\"food1\">
         <div class=\"menu-content\">
             <h4>" . $this->_name . " <span> $" . $this->_price . "</span></h4>
